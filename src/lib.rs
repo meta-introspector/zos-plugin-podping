@@ -3,6 +3,8 @@ mod plugin_trait;
 pub mod gossip;
 #[cfg(feature = "gossip")]
 pub mod private_channel;
+#[cfg(feature = "gossip")]
+pub mod da51_channels;
 use plugin_trait::*;
 use serde_json::json;
 use std::os::raw::c_char;
