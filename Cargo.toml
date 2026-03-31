@@ -14,3 +14,42 @@ sha2 = "0.10"
 hex = "0.4"
 chrono = "0.4"
 ciborium = "0.2"
+
+[features]
+default = []
+gossip = ["dep:iroh", "dep:iroh-gossip", "dep:tokio", "dep:axum", "dep:ed25519-dalek", "dep:rand", "dep:bytes", "dep:anyhow"]
+
+[dependencies.iroh]
+version = "0.97"
+optional = true
+
+[dependencies.iroh-gossip]
+version = "0.97"
+features = ["net"]
+optional = true
+
+[dependencies.tokio]
+version = "1"
+features = ["full"]
+optional = true
+
+[dependencies.axum]
+version = "0.8"
+optional = true
+
+[dependencies.ed25519-dalek]
+version = "2"
+features = ["rand_core"]
+optional = true
+
+[dependencies.rand]
+version = "0.8"
+optional = true
+
+[dependencies.bytes]
+version = "1"
+optional = true
+
+[dependencies.anyhow]
+version = "1"
+optional = true
